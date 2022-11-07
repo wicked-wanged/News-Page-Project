@@ -1,0 +1,27 @@
+@import url("./reset.css");
+/* Specifying required colors, font-size and font-weights as custom-properties */
+
+:root {
+  --clr-primary-400: hsl(35, 77%, 62%);
+  --clr-primary-800: hsl(5, 85%, 63%);
+  --clr-accent-100: hsl(36, 100%, 99%);
+  --clr-accent-400: hsl(233, 8%, 79%);
+  --clr-accent-600: hsl(236, 13%, 42%);
+  --clr-accent-800: hsl(240, 100%, 5%);
+
+  --fw-400: 400;
+  --fw-600: 700;
+  --fw-800: 800;
+  --fs-body: 15px;
+  --ff-family: "Inter", sans-serif;
+}
+
+/* Footer Styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
