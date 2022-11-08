@@ -16,6 +16,19 @@
   --ff-family: "Inter", sans-serif;
 }
 
+html {
+  font-size: var(--fs-body);
+  font-family: var(--ff-family);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* Body Styles */
+body {
+    height: 100%;
+    padding-inline: 1rem;   
+}
+
 /* Footer Styles */
 .attribution {
   font-size: 11px;
@@ -24,4 +37,96 @@
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Header Styling */
+
+.nav-bar {
+  padding: 1rem;
+}
+
+.logo-container {
+  width: clamp(3rem, 2vw, 150px);
+}
+
+/* Navigation Links Container - Mobile */
+.nav-menu-links-container{
+    display: none;
+}
+
+.active.nav-menu-links-container{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 25%;
+    top: 0%;
+}
+.active.nav-menu-links-container::before{
+    content:"";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.377);
+    backdrop-filter:blur(2px);
+}
+
+.nav-menu-list{
+    height: 70%;
+    list-style-type: none;
+}
+.nav-links{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.nav-links:hover,.nav-links:focus{
+    color: var(--clr-primary-400);
+}
+/* Content Styling */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex.nav-menu-list {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Desktop-Design*/
+
+@media only screen and (min-width: 768px){
+    body{
+        padding-inline: 3rem;
+    }
+    .nav-bar {
+        padding: 1rem;
+      }
+    .nav-menu-btn-container{
+        display: none;
+    }
+    .nav-menu-links-container{
+        display: block;
+    }
+    .nav-menu-list{
+        list-style-type: none;
+        padding: none;
+    }
+    .flex.nav-menu-list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
